@@ -1,0 +1,69 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+input[type="button"] {
+    border: none;
+    background: tomato;
+    width: 100px;
+    height: 50px;
+    font-size: 1.875em;
+    margin: 20px auto;
+    border: 3px solid #555;
+    border-radius: 3px;
+    display: block;
+}
+
+img {
+    width: 150px;
+    position: absolute;
+    left: 0%;
+    top: 20%;
+    opacity: 1;
+    transition: .25s all ease;
+}
+
+audio.start,
+audio.go {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+
+/* .timer-box p span {
+  border: 1px solid blue;
+  width: 10px;
+  height: 10px;
+} */
+
+.bmo-container {
+    position: relative;
+    height: 200px;
+    border: 3px solid tomato;
+    margin: auto;
+    width: 1000px;
+}
+
+input[type="text"] {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    border: 2px solid #555;
+}
+
+.finish-line {
+    right: 0;
+    height: 100%;
+    width: 25px;
+    background: white;
+    display: inline-block;
+    border-left: 20px solid burlywood;
+    border-right: 8px dashed black;
+    position: absolute;
+}
