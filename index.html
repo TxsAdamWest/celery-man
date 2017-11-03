@@ -2,32 +2,33 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="./animate.css">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <title>Veggie Dash</title>
 </head>
-
 <h1> Veggie Dash! </h1>
-<p> Use the -> arrow key to move Veggie to the finish line!</p>
-
-<!-- <p> Press Spacebar to make her turn! </p>
- --> 
-
- <p class="announcer">Ready?</p>
+<p class="instructions"> Press the -> arrow key repeatedly to move Veggie to the finish line! </br>5 Laps to win!</p>
+<p class="announcer animated">Ready?</p>
 <div class="timer-box">
-  <p>Timer:
-    <span id="timer-count"></span>
-  </p>
+    <p>
+        Timer:
+        <span id="timer-count">0</span> 
+        Lap:
+        <span id="lap-count">0</span>
+    </p>
 </div>
-
 <input id="startBtn" value="Start!" type="button" />
-<div class="bmo-container">
-  <img id="bmo"  src="https://cdn.dribbble.com/users/722835/screenshots/3032850/celery.gif" alt="" />
-  <div class="finish-line"></div>
+<div class="veggie-container">
+    <img id="veggie" src="./celery.gif" alt="celery" />
+    <div class="finish-line"></div>
 </div>
-
+<div class="victory-image-container">
+    <img id="victory-image" src="./celerywinkinda.gif" />
+</div>
 <audio class="start" autoplay loop controls>
-      <source src="./marioparty1.mp3">
+    <source src="./marioparty1.mp3">
 </audio>
 
 <body>

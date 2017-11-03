@@ -1,7 +1,4 @@
-h1 {
-    text-align: center;
-}
-
+h1,
 p {
     text-align: center;
 }
@@ -34,15 +31,15 @@ audio.go {
     right: 0;
 }
 
+.timer-box {
+    display: none;
+}
 
+.announcer {
+    font-weight: 700;
+}
 
-/* .timer-box p span {
-  border: 1px solid blue;
-  width: 10px;
-  height: 10px;
-} */
-
-.bmo-container {
+.veggie-container {
     position: relative;
     height: 200px;
     border: 3px solid tomato;
@@ -55,6 +52,23 @@ input[type="text"] {
     max-width: 300px;
     margin: 0 auto;
     border: 2px solid #555;
+}
+
+.victory-image-container {
+    display: block;
+    width: 75%;
+    position: relative;
+    margin: auto;
+}
+
+#victory-image {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 .finish-line {
