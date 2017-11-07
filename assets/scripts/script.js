@@ -9,16 +9,18 @@ var veggieState = {
     left: 0
 }
 
+//Unused fading effect
 function veggieBeGone() {
     if (veggieState.showing === true) {
-        veggie.style.opacity = .0
-        veggieState.showing = false
+        veggie.style.opacity = 0;
+        veggieState.showing = false;
     } else {
-        veggie.style.opacity = 1
-        veggieState.showing = true
+        veggie.style.opacity = 1;
+        veggieState.showing = true;
     }
 }
 
+//TODO:  Create object to contain global variables.
 var count = 0;
 var laps = 0;
 var controlState = 1;
@@ -36,7 +38,7 @@ function startRace() {
     console.log(veggieContainer)
     $(veggieContainer).css("border", "3px solid green");
 
-    $("body").append("<audio class='go' autoplay loop controls><source src='./marioparty2.mp3'></audio>");
+    $("body").append("<audio class='go' autoplay loop controls><source src='./assets/audio/marioparty2.mp3'></audio>");
 
 
     var timerCount = $("#timer-count")[0].innerHTML;
@@ -138,10 +140,8 @@ function veggieControl(eventObj, count) {
             controlState = 0;
         } else {
             alert("Keep going! Your time is " + $("#timer-count")[0].innerHTML + " seconds!");
-            reset(count);
+            reset(count); //TODO: For later replayability, make counter reset to 0.
         }
     }
-
-
 
 }
