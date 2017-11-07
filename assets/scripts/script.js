@@ -28,14 +28,14 @@ var controlState = 1;
 
 function startRace() {
 
-    window.addEventListener('keydown', veggieControl)
+    window.addEventListener('keydown', veggieControl);
 
     $(".start").remove();
     $(".announcer")[0].innerHTML = "Go!";
     $(".timer-box").show();
 
     var veggieContainer = $(".veggie-container")[0];
-    console.log(veggieContainer)
+    console.log(veggieContainer);
     $(veggieContainer).css("border", "3px solid green");
 
     $("body").append("<audio class='go' autoplay loop controls><source src='./assets/audio/marioparty2.mp3'></audio>");
@@ -70,35 +70,35 @@ function veggieControl(eventObj, count) {
 
         if (eventObj.keyCode === 32) {
             if (veggieState.facingRight === true) {
-                veggie.style.transform = 'rotateY(180deg)'
-                veggieState.facingRight = false
-                console.log('veggieState.Showing is ' + veggieState.showing)
+                veggie.style.transform = 'rotateY(180deg)';
+                veggieState.facingRight = false;
+                console.log('veggieState.Showing is ' + veggieState.showing);
                 // console.log('veggieState.facingRight is ' + veggieState.facingRight)
             } else {
-                veggie.style.transform = 'rotateY(0deg)'
-                veggieState.facingRight = true
+                veggie.style.transform = 'rotateY(0deg)';
+                veggieState.facingRight = true;
                 // console.log('veggieState.showing is ' + veggieState.showing)
                 // console.log('veggieState.facingRight is ' + veggieState.facingRight)
             }
         }
 
         if (eventObj.keyCode === 38) {
-            console.log("38 up")
-            veggieState.top -= 10
-            veggie.style.top = veggieState.top + 'px'
+            console.log("38 up");
+            veggieState.top -= 10;
+            veggie.style.top = veggieState.top + 'px';
         }
 
         if (eventObj.keyCode === 40) {
-            console.log("40 down")
-            veggieState.top += 10
-            veggie.style.top = veggieState.top + 'px'
+            console.log("40 down");
+            veggieState.top += 10;
+            veggie.style.top = veggieState.top + 'px';
         }
 
         if (eventObj.keyCode === 37) {
             // console.log('37 left')
-            veggieState.left -= 10
-            veggie.style.transform = 'rotateY(180deg)'
-            veggie.style.left = veggieState.left + 'px'
+            veggieState.left -= 10;
+            veggie.style.transform = 'rotateY(180deg)';
+            veggie.style.left = veggieState.left + 'px';
         }
 
         if (eventObj.keyCode === 39) {
@@ -106,15 +106,15 @@ function veggieControl(eventObj, count) {
             // console.log($(veggie).css("left"))
 
             veggieState.left += 30;
-            veggie.style.transform = 'rotateY(0deg)'
-            veggie.style.left = veggieState.left + 'px'
+            veggie.style.transform = 'rotateY(0deg)';
+            veggie.style.left = veggieState.left + 'px';
         }
 
     }
 
     function reset(count) {
         veggieState.left = 0;
-        veggie.style.left = veggieState.left + 'px'
+        veggie.style.left = veggieState.left + 'px';
         $("#lap-count")[0].innerHTML = count / 10;
 
         laps += 1;
